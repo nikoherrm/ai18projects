@@ -18,10 +18,12 @@
 (assert (forall ((x Plant)) (or (Fruit x) (Flower x) (Vegetable x))))
 
 ;; TODO: constraint 2
-(assert (forall ((g Garden)) 
-  (exists ((p Plant)) (exists ((q Plant)) (exists ((r Plant)) 
-    (and (GrowsIn p g) (GrowsIn q g) (GrowsIn r g) (distinct p q r)))
-))))
+(assert (forall ((g Garden)) (exists ((p Plant)) 
+  (exists ((q Plant)) (exists ((r Plant)) (and (GrowsIn p g) 
+    (GrowsIn q g) (GrowsIn r g) (distinct p q r) 
+    (and (forall ((x Plant))
+        (implies (GrowsIn x g) (or (= x p) (= x q) (= x r)))))
+))))))
 
 ;; TODO: constraint 3
 (assert (forall ((p Plant))
