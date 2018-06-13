@@ -1,0 +1,65 @@
+sat
+garden1:
+(((GrowsIn apple garden1) true)
+ ((GrowsIn banana garden1) true)
+ ((GrowsIn cherry garden1) true)
+ ((GrowsIn rose garden1) false)
+ ((GrowsIn tulip garden1) false)
+ ((GrowsIn lily garden1) true)
+ ((GrowsIn onion garden1) true)
+ ((GrowsIn carrot garden1) true)
+ ((GrowsIn pepper garden1) true))
+garden2:
+(((GrowsIn apple garden2) true)
+ ((GrowsIn banana garden2) true)
+ ((GrowsIn cherry garden2) true)
+ ((GrowsIn rose garden2) false)
+ ((GrowsIn tulip garden2) false)
+ ((GrowsIn lily garden2) false)
+ ((GrowsIn onion garden2) false)
+ ((GrowsIn carrot garden2) true)
+ ((GrowsIn pepper garden2) true))
+garden3:
+(((GrowsIn apple garden3) true)
+ ((GrowsIn banana garden3) true)
+ ((GrowsIn cherry garden3) true)
+ ((GrowsIn rose garden3) true)
+ ((GrowsIn tulip garden3) true)
+ ((GrowsIn lily garden3) true)
+ ((GrowsIn onion garden3) true)
+ ((GrowsIn carrot garden3) false)
+ ((GrowsIn pepper garden3) true))
+garden4:
+(((GrowsIn apple garden4) true)
+ ((GrowsIn banana garden4) true)
+ ((GrowsIn cherry garden4) false)
+ ((GrowsIn rose garden4) false)
+ ((GrowsIn tulip garden4) false)
+ ((GrowsIn lily garden4) true)
+ ((GrowsIn onion garden4) true)
+ ((GrowsIn carrot garden4) true)
+ ((GrowsIn pepper garden4) true))
+
+(:added-eqs               10270
+ :binary-propagations     568
+ :conflicts               182
+ :datatype-accessor-ax    13
+ :datatype-constructor-ax 1098
+ :datatype-occurs-check   78
+ :datatype-splits         977
+ :decisions               2840
+ :del-clause              1712
+ :final-checks            6
+ :max-generation          4
+ :max-memory              3.05
+ :memory                  1.72
+ :minimized-lits          1
+ :mk-bool-var             2873
+ :mk-clause               1892
+ :num-allocs              69900
+ :propagations            3490
+ :quant-instantiations    913
+ :restarts                5
+ :rlimit-count            103842
+ :time                    0.08
+ :total-time              0.11)
