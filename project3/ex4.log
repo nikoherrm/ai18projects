@@ -1,7 +1,7 @@
 sat
 garden1:
-(((GrowsIn apple garden1) false)
- ((GrowsIn banana garden1) true)
+(((GrowsIn apple garden1) true)
+ ((GrowsIn banana garden1) false)
  ((GrowsIn cherry garden1) false)
  ((GrowsIn rose garden1) false)
  ((GrowsIn tulip garden1) false)
