@@ -27,8 +27,8 @@
 ))
 
 ;; TODO: constraint 4
-(assert (exists ((x Garden) (y Garden))
-	(=> (and (GrowsIn apple x) (GrowsIn banana x) (GrowsIn cherry x) (GrowsIn apple y) (GrowsIn banana y) (GrowsIn cherry y)) (= x y))))
+(assert (exists ((g Garden) (x Plant) (y Plant) (z Plant))
+    (and (Fruit x) (Fruit y) (Fruit z) (GrowsIn x g) (GrowsIn y g) (GrowsIn z g) (distinct x y z))))
 
 ;; TODO: constraint 5
 (assert (exists ((a Plant) (b Plant) (c Plant) (x Garden) (y Garden)) (and  (GrowsIn a x) (GrowsIn b x) (GrowsIn c x) (GrowsIn a y) (GrowsIn b y) (GrowsIn c y) (distinct x y))))
