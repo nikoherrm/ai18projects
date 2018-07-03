@@ -1,0 +1,161 @@
+$ ff -o stub-domain1.pddl -f stub-p01.pddl
+
+ff: parsing domain file
+domain 'RUSH-HOUR' defined
+ ... done.
+ff: parsing problem file
+problem 'RUSH-HOUR-P01' defined
+ ... done.
+
+
+
+Cueing down from goal distance:   24 into depth [1]
+                                  23            [1]
+                                  22            [1]
+                                  21            [1]
+                                  20            [1]
+                                  19            [1]
+                                  18            [1]
+                                  17            [1]
+                                  16            [1]
+                                  15            [1]
+                                  14            [1]
+                                  13            [1]
+                                  12            [1]
+                                  11            [1]
+                                  10            [1]
+                                   9            [1]
+                                   8            [1]
+                                   7            [1][2][3][4]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   24
+                          23
+                          22
+                          21
+                          20
+                          19
+                          18
+                          17
+                          16
+                          15
+                          14
+                          13
+                          12
+                          11
+                          10
+                           9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: MOVE-SMALL CAR18 LOC3_6 LOC2_6 LOC1_6
+        1: MOVE-LARGE CAR14 LOC5_2 LOC4_2 LOC3_2 LOC2_2
+        2: MOVE-LARGE CAR13 LOC6_1 LOC5_1 LOC4_1 LOC3_1
+        3: MOVE-SMALL CAR3 LOC3_3 LOC3_4 LOC3_5
+        4: MOVE-SMALL CAR5 LOC5_4 LOC5_3 LOC5_2
+        5: MOVE-LARGE CAR13 LOC5_1 LOC4_1 LOC3_1 LOC2_1
+        6: MOVE-SMALL RED LOC1_3 LOC2_3 LOC3_3
+        7: MOVE-SMALL CAR3 LOC3_4 LOC3_5 LOC3_6
+        8: MOVE-SMALL CAR5 LOC5_3 LOC5_2 LOC5_1
+        9: MOVE-SMALL CAR1 LOC1_1 LOC1_2 LOC1_3
+       10: MOVE-SMALL CAR16 LOC1_4 LOC2_4 LOC3_4
+       11: MOVE-LARGE CAR13 LOC4_1 LOC3_1 LOC2_1 LOC1_1
+       12: MOVE-SMALL CAR1 LOC1_2 LOC1_3 LOC1_4
+       13: MOVE-LARGE CAR14 LOC4_2 LOC3_2 LOC2_2 LOC1_2
+       14: MOVE-SMALL CAR4 LOC4_4 LOC4_3 LOC4_2
+       15: MOVE-SMALL CAR4 LOC4_3 LOC4_2 LOC4_1
+       16: MOVE-LARGE CAR6 LOC6_4 LOC6_3 LOC6_2 LOC6_1
+       17: MOVE-SMALL CAR16 LOC2_4 LOC3_4 LOC4_4
+       18: MOVE-SMALL CAR16 LOC3_4 LOC4_4 LOC5_4
+       19: MOVE-SMALL CAR3 LOC3_6 LOC3_5 LOC3_4
+       20: MOVE-SMALL CAR16 LOC4_4 LOC5_4 LOC6_4
+       21: MOVE-SMALL CAR18 LOC1_6 LOC2_6 LOC3_6
+       22: MOVE-SMALL CAR10 LOC4_6 LOC4_5 LOC4_4
+       23: MOVE-SMALL CAR18 LOC2_6 LOC3_6 LOC4_6
+       24: MOVE-SMALL CAR18 LOC3_6 LOC4_6 LOC5_6
+       25: MOVE-SMALL CAR3 LOC3_4 LOC3_5 LOC3_6
+       26: MOVE-SMALL CAR18 LOC4_6 LOC5_6 LOC6_6
+       27: MOVE-SMALL CAR10 LOC4_4 LOC4_5 LOC4_6
+       28: MOVE-SMALL CAR16 LOC6_4 LOC5_4 LOC4_4
+       29: MOVE-LARGE CAR6 LOC6_1 LOC6_2 LOC6_3 LOC6_4
+       30: MOVE-SMALL CAR16 LOC5_4 LOC4_4 LOC3_4
+       31: MOVE-SMALL CAR16 LOC4_4 LOC3_4 LOC2_4
+       32: MOVE-SMALL CAR10 LOC4_6 LOC4_5 LOC4_4
+       33: MOVE-SMALL CAR18 LOC6_6 LOC5_6 LOC4_6
+       34: MOVE-SMALL CAR1 LOC1_3 LOC1_4 LOC1_5
+       35: MOVE-SMALL CAR10 LOC4_5 LOC4_4 LOC4_3
+       36: MOVE-SMALL CAR1 LOC1_4 LOC1_5 LOC1_6
+       37: MOVE-SMALL CAR17 LOC6_5 LOC5_5 LOC4_5
+       38: MOVE-SMALL CAR16 LOC3_4 LOC2_4 LOC1_4
+       39: MOVE-LARGE CAR6 LOC6_2 LOC6_3 LOC6_4 LOC6_5
+       40: MOVE-SMALL CAR3 LOC3_6 LOC3_5 LOC3_4
+       41: MOVE-LARGE CAR6 LOC6_3 LOC6_4 LOC6_5 LOC6_6
+       42: MOVE-SMALL CAR18 LOC5_6 LOC4_6 LOC3_6
+       43: MOVE-SMALL CAR18 LOC4_6 LOC3_6 LOC2_6
+       44: MOVE-SMALL RED LOC3_3 LOC2_3 LOC1_3
+       45: MOVE-SMALL CAR3 LOC3_5 LOC3_4 LOC3_3
+       46: MOVE-SMALL CAR17 LOC5_5 LOC4_5 LOC3_5
+       47: MOVE-SMALL CAR17 LOC4_5 LOC3_5 LOC2_5
+       48: MOVE-SMALL CAR10 LOC4_3 LOC4_4 LOC4_5
+       49: MOVE-SMALL CAR5 LOC5_1 LOC5_2 LOC5_3
+       50: MOVE-SMALL CAR5 LOC5_2 LOC5_3 LOC5_4
+       51: MOVE-SMALL CAR5 LOC5_3 LOC5_4 LOC5_5
+       52: MOVE-SMALL CAR4 LOC4_1 LOC4_2 LOC4_3
+       53: MOVE-SMALL CAR10 LOC4_4 LOC4_5 LOC4_6
+       54: MOVE-LARGE CAR13 LOC1_1 LOC2_1 LOC3_1 LOC4_1
+       55: MOVE-SMALL CAR4 LOC4_2 LOC4_3 LOC4_4
+       56: MOVE-LARGE CAR13 LOC2_1 LOC3_1 LOC4_1 LOC5_1
+       57: MOVE-LARGE CAR14 LOC1_2 LOC2_2 LOC3_2 LOC4_2
+       58: MOVE-LARGE CAR13 LOC3_1 LOC4_1 LOC5_1 LOC6_1
+       59: MOVE-LARGE CAR14 LOC2_2 LOC3_2 LOC4_2 LOC5_2
+       60: MOVE-LARGE CAR14 LOC3_2 LOC4_2 LOC5_2 LOC6_2
+       61: MOVE-SMALL CAR3 LOC3_4 LOC3_3 LOC3_2
+       62: MOVE-SMALL CAR3 LOC3_3 LOC3_2 LOC3_1
+       63: MOVE-SMALL RED LOC1_3 LOC2_3 LOC3_3
+       64: MOVE-SMALL CAR16 LOC1_4 LOC2_4 LOC3_4
+       65: MOVE-SMALL CAR1 LOC1_6 LOC1_5 LOC1_4
+       66: MOVE-SMALL CAR1 LOC1_5 LOC1_4 LOC1_3
+       67: MOVE-SMALL CAR1 LOC1_4 LOC1_3 LOC1_2
+       68: MOVE-SMALL CAR16 LOC3_4 LOC2_4 LOC1_4
+       69: MOVE-SMALL CAR1 LOC1_3 LOC1_2 LOC1_1
+       70: MOVE-SMALL RED LOC3_3 LOC2_3 LOC1_3
+       71: MOVE-SMALL CAR3 LOC3_1 LOC3_2 LOC3_3
+       72: MOVE-LARGE CAR13 LOC6_1 LOC5_1 LOC4_1 LOC3_1
+       73: MOVE-LARGE CAR13 LOC5_1 LOC4_1 LOC3_1 LOC2_1
+       74: MOVE-SMALL CAR17 LOC3_5 LOC2_5 LOC1_5
+       75: MOVE-SMALL CAR18 LOC3_6 LOC2_6 LOC1_6
+       76: MOVE-SMALL CAR3 LOC3_2 LOC3_3 LOC3_4
+       77: MOVE-SMALL CAR3 LOC3_3 LOC3_4 LOC3_5
+       78: MOVE-LARGE CAR14 LOC6_2 LOC5_2 LOC4_2 LOC3_2
+       79: MOVE-SMALL RED LOC1_3 LOC2_3 LOC3_3
+       80: MOVE-SMALL CAR3 LOC3_4 LOC3_5 LOC3_6
+       81: MOVE-LARGE CAR14 LOC5_2 LOC4_2 LOC3_2 LOC2_2
+       82: MOVE-SMALL CAR1 LOC1_1 LOC1_2 LOC1_3
+       83: MOVE-SMALL CAR16 LOC1_4 LOC2_4 LOC3_4
+       84: MOVE-LARGE CAR13 LOC4_1 LOC3_1 LOC2_1 LOC1_1
+       85: MOVE-SMALL CAR1 LOC1_2 LOC1_3 LOC1_4
+       86: MOVE-LARGE CAR14 LOC4_2 LOC3_2 LOC2_2 LOC1_2
+       87: MOVE-SMALL CAR4 LOC4_4 LOC4_3 LOC4_2
+       88: MOVE-SMALL CAR4 LOC4_3 LOC4_2 LOC4_1
+       89: MOVE-SMALL RED LOC2_3 LOC3_3 LOC4_3
+       90: MOVE-SMALL RED LOC3_3 LOC4_3 LOC5_3
+       91: MOVE-SMALL RED LOC4_3 LOC5_3 LOC6_3
+
+
+time spent:    0.00 seconds instantiating 1080 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 144 facts and 90 actions
+               0.00 seconds creating final representation with 144 relevant facts
+               0.00 seconds building connectivity graph
+               0.11 seconds searching, evaluating 6161 states, to a max depth of 4
+               0.11 seconds total time

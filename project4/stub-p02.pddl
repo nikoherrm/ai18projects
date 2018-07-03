@@ -19,10 +19,71 @@
         (plusone y5 y6)
     
     
-        ;; TODO
-        
+        (isOccupied x1 y3)				;
+		(isOccupied x2 y3)				;
+        (carHead red x2 y3)				;
+		(carTail red x1 y3)				;	THIS IS INITIAL STATE OF THE RED CAR
+
+		(isOccupied x1 y1)				;
+		(isOccupied x1 y2)				;
+        (carHead car1 x1 y2)			;
+		(carTail car1 x1 y1)			;	THIS IS INITIAL STATE OF CAR 1
+		
+		(isOccupied x3 y3)				;
+		(isOccupied x3 y4)				;
+        (carHead car3 x3 y4)			;
+		(carTail car3 x3 y3)			;	THIS IS INITIAL STATE OF CAR 3
+		
+		(isOccupied x4 y3)				;
+		(isOccupied x4 y4)				;
+        (carHead car4 x4 y4)			;
+		(carTail car4 x4 y3)			;	THIS IS INITIAL STATE OF CAR 4
+		
+		(isOccupied x5 y3)				;
+		(isOccupied x5 y4)				;
+        (carHead car5 x5 y4)			;
+		(carTail car5 x5 y3)			;	THIS IS INITIAL STATE OF CAR 5
+		
+		(isOccupied x6 y2)				;
+		(isOccupied x6 y3)				;
+		(isOccupied x6 y4)				;
+        (carHead car6 x6 y4)			;
+		(carTail car6 x6 y2)			;	THIS IS INITIAL STATE OF CAR 6
+		
+		(isOccupied x4 y5)				;
+		(isOccupied x4 y6)				;
+        (carHead car10 x4 y6)			;
+		(carTail car10 x4 y5)			;	THIS IS INITIAL STATE OF CAR 10
+		
+		(isOccupied x4 y1)				;
+		(isOccupied x5 y1)				;
+		(isOccupied x6 y1)				;
+        (carHead car13 x6 y1)			;
+		(carTail car13 x4 y1)			;	THIS IS INITIAL STATE OF CAR 13
+		
+		(isOccupied x3 y2)				;
+		(isOccupied x4 y2)				;
+		(isOccupied x5 y2)				;
+        (carHead car14 x5 y2)			;
+		(carTail car14 x3 y2)			;	THIS IS INITIAL STATE OF CAR 14
+		
+		(isOccupied x1 y4)				;
+		(isOccupied x2 y4)				;
+        (carHead car16 x2 y4)			;
+		(carTail car16 x1 y4)			;	THIS IS INITIAL STATE OF CAR 16
+		
+		(isOccupied x5 y5)				;
+		(isOccupied x6 y5)				;
+        (carHead car17 x6 y5)			;
+		(carTail car17 x5 y5)			;	THIS IS INITIAL STATE OF CAR 17
+		
+		(isOccupied x2 y6)				;
+		(isOccupied x3 y6)				;
+        (carHead car18 x3 y6)			;
+		(carTail car18 x2 y6)			;	THIS IS INITIAL STATE OF CAR 18
     )
     (:goal (and
-        ;; TODO
+        (carHead red x6 y3)				
+		(carTail red x5 y3)				; 	IN THE GOAL STATE THE HEAD & TAIL OF THE RED CAR HAS TO BE IN POSITION (6,3), (5,3)
     ))
 )
