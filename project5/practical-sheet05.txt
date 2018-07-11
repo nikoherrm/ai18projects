@@ -1,0 +1,77 @@
+
+EXERCISE 7
+
+1. Query
+0 [main] INFO de.dfki.ai17.sparql.Main  - executing query:
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX pizza: <http://www.co-ode.org/ontologies/pizza/pizza.owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX ai: <http://www.forschungssoftware.de/ai#>
+
+SELECT ?X
+WHERE { ?X rdf:type pizza:Country }
+
+1 [main] INFO de.dfki.ai17.sparql.Main  - result:
+-----------------
+| X             |
+=================
+| pizza:Italy   |
+| pizza:Germany |
+| pizza:France  |
+| pizza:England |
+| pizza:America |
+-----------------
+
+2. Query
+
+0 [main] INFO de.dfki.ai17.sparql.Main  - executing query:
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX pizza: <http://www.co-ode.org/ontologies/pizza/pizza.owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?X
+WHERE { ?X rdfs:subClassOf* pizza:MeatTopping }
+ORDER BY ASC(?X)
+
+1 [main] INFO de.dfki.ai17.sparql.Main  - result:
+--------------------------------
+| X                            |
+================================
+| pizza:ChickenTopping         |
+| pizza:HamTopping             |
+| pizza:HotSpicedBeefTopping   |
+| pizza:MeatTopping            |
+| pizza:ParmaHamTopping        |
+| pizza:PeperoniSausageTopping |
+--------------------------------
+
+3. Query
+
+0 [main] INFO de.dfki.ai17.sparql.Main  - executing query:
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX pizza: <http://www.co-ode.org/ontologies/pizza/pizza.owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?X
+    WHERE { ?X rdfs:subClassOf* pizza:PizzaTopping .
+            ?X rdfs:subClassOf ?restriction .
+            ?restriction owl:onProperty pizza:hasSpiciness .
+            ?restriction owl:someValuesFrom pizza:Hot .
+    }
+1 [main] INFO de.dfki.ai17.sparql.Main  - result:
+-------------------------------
+| X                           |
+===============================
+| pizza:HotSpicedBeefTopping  |
+| pizza:JalapenoPepperTopping |
+| pizza:HotGreenPepperTopping |
+| pizza:CajunSpiceTopping     |
+| pizza:TobascoPepperSauce    |
+-------------------------------
+ 
