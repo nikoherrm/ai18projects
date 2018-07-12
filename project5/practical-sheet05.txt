@@ -75,3 +75,53 @@ SELECT ?X
 | pizza:TobascoPepperSauce    |
 -------------------------------
  
+4. Query
+
+0 [main] INFO de.dfki.ai17.sparql.Main  - executing query:
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX pizza: <http://www.co-ode.org/ontologies/pizza/pizza.owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?CheesyPizza
+WHERE {
+		?CheesyPizza rdfs:subClassOf ?Pizza .
+		?Pizza owl:someValuesFrom ?CheeseTopping .
+		?CheeseTopping rdfs:subClassOf* pizza:CheeseTopping
+	  }
+1 [main] INFO de.dfki.ai17.sparql.Main  - result:
+-------------------------
+| CheesyPizza           |
+=========================
+| pizza:PolloAdAstra    |
+| pizza:Rosa            |
+| pizza:Parmense        |
+| pizza:Cajun           |
+| pizza:Veneziana       |
+| pizza:Fiorentina      |
+| pizza:SloppyGiuseppe  |
+| pizza:Soho            |
+| pizza:Giardiniera     |
+| pizza:PrinceCarlo     |
+| pizza:Napoletana      |
+| pizza:American        |
+| pizza:AmericanHot     |
+| pizza:LaReine         |
+| pizza:Margherita      |
+| pizza:QuattroFormaggi |
+| pizza:Capricciosa     |
+| pizza:Caprina         |
+| pizza:Mushroom        |
+| pizza:FourSeasons     |
+| pizza:UnclosedPizza   |
+| pizza:Siciliana       |
+-------------------------
+
+5. Discuss
+
+	The difference between the Query given in 5 and the Query from 4 is:
+	1. There is a Typo, a typing error. There is no Class "CheeseyPizza". The Class is "CheesyPizza"
+	2. No Pizza has CheeseTopping as its topping, only Toppings which are CheeseToppings. e.g. MozarellaTopping
+
+6. 
